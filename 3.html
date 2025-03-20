@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            position: relative;
+            margin: 50px;
+            border: 1px solid black;
+        }      
+        .box{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #AABBCC;
+            padding: 10px;
+            outline: 1px dotted red;
+            margin: 20px;
+            outline-offset: 5px;
+        }
+        #item1{
+            position: static;
+            top: 100px;
+            left: 200px;
+
+            border: 10px solid rgba(35 , 100, 3, 2);
+            background-color: rgba(255, 80, 80, 0.493);
+            background-image: url("imagem.png");
+            background-size: 30%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            color: black;
+            font-size: 20pt;
+            font-style: normal;
+        }
+        #item2{
+            position: absolute;
+            background-color: blueviolet;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+        }
+        #item3{
+            position: fixed; /*relação ao view port*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);/*O centro do elemento esta no CENTRO da tela agora*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--div>div#item$.box{item$}*4-->
+        <div>
+            <div id="item1" class="box">item1</div>
+            <div id="item2" class="box">item2</div>
+            <div id="item3" class="box">item3</div>
+            <div id="item4" class="box">item4</div>
+        </div>
+    </div>
+</body>
+</html>
