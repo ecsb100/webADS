@@ -14,7 +14,7 @@
             width: 100px;
             height: 100px;
             background-color: red;
-            transition: all 1s ease-in 1s;
+            transition: all 5s ease-in 0s;
         }
         .boxa:hover{
             width: 200px;
@@ -24,18 +24,19 @@
         .box{
             width: 50px;
             height: 50px;
+            position: relative;
             border: 1px solid black;
-            
             flex-shrink: 0;
             animation: rotacao 1s ease-in 0s infinite;
         }
         @keyframes rotacao {
             0%{
                 transform: rotate(0deg);
+                top: 0px;
             }
             100%{
                 transform: rotate(360deg);
-                
+                top: 150px;
                 border-radius: 50%;
 
             }
@@ -60,10 +61,10 @@
         }
     </code>
     <div class="container">
-    <div id="boxa">boxa</div>
-    <div id="boxa">boxa</div>
-    <div id="boxa">boxa</div>
-    <div id="boxa">boxa</div>
+    <div class="boxa">boxa</div>
+    <div class="boxa">boxa</div>
+    <div class="boxa">boxa</div>
+    <div class="boxa">boxa</div>
     </div>
     <h2>animações em css</h2>
 

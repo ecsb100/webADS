@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a responsividade em dispositivos móveis -->
+    <title>Container Fixo</title> <!-- Define o título da página -->
+
+    <style>
+        /* Estiliza o container fixo no canto inferior direito */
+        .container {
+            min-width: 300px;
+            border: 1px solid black; /* Adiciona uma borda preta */
+            padding: 10px; /* Adiciona um espaçamento interno */
+            width: 30vw; /* Define a largura como 30% da largura da tela */
+            max-width: 300px; /* Define um limite máximo de largura para evitar que fique muito grande */
+            height: auto; /* Ajusta a altura automaticamente de acordo com o conteúdo */
+            position: fixed; /* Mantém o container fixo na tela */
+            bottom: 10px; /* Posiciona o container a 10px do fundo da tela */
+            right: 10px; /* Posiciona o container a 10px da direita */
+            background: white; /* Define o fundo branco para melhor visibilidade */
+            border-radius: 10px; /* Arredonda os cantos do container */
+            /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);  Adiciona uma sombra para destacar o container */
+        }
+
+        /* Estiliza a caixa interna */
+        .box {
+            display: flex; /* Usa flexbox para alinhar os itens */
+            align-items: center; /* Alinha os itens verticalmente (Ajusta nomeio das duas linhas sup e inf)*/
+            border: 1px solid black; /* Adiciona uma borda preta */
+            padding: 5px; /* Adiciona um espaçamento interno */
+            border-radius: 5px; /* Arredonda os cantos da caixa */
+        }
+
+        .md{
+            justify-content: flex-end;
+            background-color: 
+            rgb(92, 204, 111);
+        }
+
+        /* Estiliza a imagem */
+        img {
+            width: 30px; /* Define a largura da imagem */
+            height: 30px; /* Define a altura da imagem */
+            margin-right: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
+        }
+        .imgd{
+            margin-left: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
+        }
+        .spand{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 12px;
+            font-style: italic;
+            margin-right: 10px;
+                        
+        }
+        span{
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        /* Estiliza o texto */
+        #texto {
+            font-size: 14px; /* Define o tamanho da fonte */
+        }
+        .horario{
+            margin-left: 85px;
+            margin-top: 20px;
+            /*margin-left: -20px;
+            */
+        }
+        .horariod{
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .horariod2{
+            margin-right: 140px;
+            margin-top: 20px;
+        }
+
+        #box5{
+            padding: 30px;
+            margin-top: 15px;
+        }
+
+        textarea{
+            width: 250px;
+           resize: none; /*Serve para desabiltar poder aumentar a text area com o mause*/
+           height: 80px;
+        }
+
+        .boxarea{
+            display: flex; /* Usa flexbox para alinhar os itens */
+            flex-direction: column;
+            align-items: center; /* Alinha os itens verticalmente (Ajusta nomeio das duas linhas sup e inf)*/
+            border: 1px solid black; /* Adiciona uma borda preta */
+            padding: 5px; /* Adiciona um espaçamento interno */
+            border-radius: 5px; /* Arredonda os cantos da caixa */
+
+        }
+        button{
+            margin-top: 20px;
+            margin-bottom: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Container fixo no canto inferior direito -->
+    <div class="container">
+        <!-- Caixa interna com imagem e texto -->
+         <span>Dog Auau:</span>
+        <div class="box" id="box1">
+            <div id="img"><img src="baixados.png" alt=""></div> <!-- Imagem -->
+            <div id="texto">Bom dia! Tudo bem?</div> <!-- Texto -->
+            <div class="horario"><span >10:00</span></div>
+        </div>
+        
+        <span class="spand">Eu:</span>
+        <div class="box md" id="box2">
+            <div class="horariod"><span >10:01</span></div>
+            <div id="texto">Bom dia! Tudo sim, e com você?</div> <!-- Texto -->
+            <div class="imgd" id="img"><img src="gatinho.png" alt=""></div> <!-- Imagem -->
+            
+        </div> <!-- Segunda caixa -->
+        <span>Dog Auau:</span>
+        <div class="box" id="box3">
+            <div id="img"><img src="baixados.png" alt=""></div> <!-- Imagem -->
+            <div id="texto">Tudo bem também!</div> <!-- Texto -->
+            <div class="horario"><span >10:00</span></div>
+        </div> <!-- Terceira caixa -->
+        <span class="spand">Eu:</span>
+        <div class="box md" id="box4">
+            <div class="horariod2"><span >10:00</span></div>
+            <div id="texto">Que bom!</div> <!-- Texto -->
+            <div class="imgd" id="img"><img src="gatinho.png" alt=""></div> <!-- Imagem -->
+            
+        </div> <!-- Quarta caixa -->
+        <div class="boxarea" id="box5">
+            <textarea name="digite" id=""></textarea>
+            <div><button>Enviar</button></div>
+        </div> <!-- Caixa para campo de mensagem -->
+    </div>
+</body>
+</html>
